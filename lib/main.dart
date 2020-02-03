@@ -12,6 +12,8 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.lightGreen,
           body: SafeArea(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+
               children: <Widget>[
                 CircleAvatar(
                   radius: 50.0,
@@ -36,50 +38,58 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   ),
                 ),
-                Container(
-                  padding: EdgeInsets.all(10.0),
-                  margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                  color: Colors.white,
-                  child: Row(
-                    children: <Widget>[
-                      Icon(Icons.phone_android,
-                        size: 50.0,
-                      ),
-                      SizedBox(
-                        width: 10.0,
-                      ),
-                      Text(
-                        '253.223.3253',
-                        style: TextStyle (
-                          color: Colors.black,
-                          fontFamily: 'Pacifico',
-                          fontSize: 25.0,
-                        ),
-                      ),
-                    ],
+                SizedBox(
+                  height: 20.0,
+                  width: 150.0,
+                  child: Divider(
+                    color: Colors.white,
                   ),
                 ),
-                Container(
-                  padding: EdgeInsets.all(10.0),
+                Card(
                   margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
                   color: Colors.white,
-                  child: Row(
-                    children: <Widget>[
-                      Icon(Icons.email,
-                        size: 50.0,
+                  child: Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: Row(
+                      children: <Widget>[
+                        Icon(Icons.phone_android,
+                          size: 50.0,
+                        ),
+                        SizedBox(
+                          width: 10.0,
+                        ),
+                        Text(
+                          '253.223.3253',
+                          style: TextStyle (
+                            color: Colors.black,
+                            fontFamily: 'Pacifico',
+                            fontSize: 25.0,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Card(
+                  margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                  color: Colors.red,
+                  child: Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: ListTile(
+                      leading: Icon(
+                          Icons.email,
+                          size: 50.0,
+                          color: Colors.white,
                       ),
-                      SizedBox(
-                        width: 10.0,
-                      ),
-                      Text(
+                      title: Text(
                         'rdrwood@gmail.com',
                         style: TextStyle (
-                          color: Colors.black,
-                          fontFamily: 'Pacifico',
-                          fontSize: 25.0,
+                        color: Colors.white,
+                        fontFamily: 'Pacifico',
+                        fontSize: 18.0,
                         ),
-                      ),
-                    ],
+                    ),
+                    ),
                   ),
                 ),
               ],
@@ -89,3 +99,24 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+/*
+
+Row(
+children: <Widget>[
+Icon(Icons.email,
+size: 50.0,
+),
+SizedBox(
+width: 10.0,
+),
+Text(
+'rdrwood@gmail.com',
+style: TextStyle (
+color: Colors.black,
+fontFamily: 'Pacifico',
+fontSize: 25.0,
+),
+),
+],
+),*/
