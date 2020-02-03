@@ -23,3 +23,8 @@ flutter:
 
   assets:
     - images/rw_prof.jpg
+
+  fonts:
+    - family: Pacifico
+      fonts:
+        - asset: fonts/Pacifico-Regular.ttf
